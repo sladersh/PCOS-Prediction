@@ -1,0 +1,124 @@
+<div class="prediction-result">
+  <div *ngIf="sharedService.prediction == 'Yes'" class="result result-positive">
+    <div class="message">
+      <img [src]="images.sad" alt="image" />
+      <h2 class="heading">Sorry, you are PCOS Positive</h2>
+    </div>
+    <div>
+      <h3 class="next-steps">Next Steps:</h3>
+      <ul>
+        <li>
+          <img [src]="images.doctor" alt="image" />
+          <div>
+            Consult with a healthcare professional who specializes in
+            reproductive health, such as a gynecologist or endocrinologist:
+            These specialists can evaluate your symptoms, perform diagnostic
+            tests, and provide personalized guidance on managing PCOS. They can
+            also rule out other conditions that may cause similar symptoms.
+          </div>
+        </li>
+        <li>
+          <img [src]="images.blood" alt="image" />
+          <div>
+            Get a blood test to check hormone levels, including insulin and
+            androgen levels: Blood tests can help determine if hormone
+            imbalances are contributing to PCOS symptoms. Insulin resistance and
+            elevated androgen levels are common in women with PCOS, and blood
+            tests can provide important information for developing a treatment
+            plan.
+          </div>
+        </li>
+        <li>
+          <img [src]="images.scan" alt="image" />
+          <div>
+            Undergo an ultrasound to check for cysts on the ovaries: An
+            ultrasound can help detect the presence of ovarian cysts, which are
+            common in women with PCOS. The ultrasound can also help evaluate the
+            thickness of the lining of the uterus and check for other
+            conditions, such as fibroids.
+          </div>
+        </li>
+        <li>
+          <img [src]="images.health" alt="image" />
+          <div>
+            Maintain a healthy lifestyle through diet and exercise, as weight
+            management can have a significant impact on PCOS symptoms:
+            Maintaining a healthy weight through diet and exercise can help
+            regulate menstrual cycles, improve insulin resistance, and reduce
+            excess hair growth. A healthcare professional can provide
+            personalized guidance on developing a healthy diet and exercise
+            plan.
+          </div>
+        </li>
+        <li>
+          <img [src]="images.treatment" alt="image" />
+          <div>
+            Discuss treatment options with a healthcare professional, which may
+            include medications to regulate menstrual cycles, control insulin
+            resistance, or reduce excess hair growth: Treatment options for PCOS
+            may include birth control pills to regulate menstrual cycles,
+            anti-androgen medications to reduce excess hair growth, and
+            medications to improve insulin sensitivity. A healthcare
+            professional can evaluate your symptoms and provide personalized
+            guidance on which treatment options may be appropriate for you.
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div *ngIf="sharedService.prediction == 'No'" class="result result-negative">
+    <div class="message">
+      <img [src]="images.happy" alt="image" />
+      <h2 class="heading">You are PCOS Negative</h2>
+    </div>
+    <div>
+      <h3 class="next-steps">Next Steps:</h3>
+      <ul>
+        <li>
+          <img [src]="images.diet" alt="image" />
+          <div>
+            <strong>Maintain a healthy diet:</strong> Eating a well-balanced
+            diet that includes plenty of fruits, vegetables, whole grains, and
+            lean proteins can help support reproductive health and overall
+            well-being. This can include foods high in nutrients like folate and
+            iron, which are important for reproductive health.
+          </div>
+        </li>
+        <li>
+          <img [src]="images.exercise" alt="image" />
+          <div>
+            <strong>Exercise regularly:</strong> Regular exercise can help
+            maintain a healthy weight, improve cardiovascular health, and reduce
+            stress levels, all of which can improve overall health and
+            well-being. Aim for at least 30 minutes of moderate-intensity
+            exercise, such as brisk walking or cycling, on most days of the
+            week.
+          </div>
+        </li>
+        <li>
+          <img [src]="images.stress" alt="image" />
+          <div>
+            <strong>Manage stress:</strong> High stress levels can have negative
+            impacts on both physical and mental health, so finding ways to
+            manage stress is important. This can include practicing relaxation
+            techniques like yoga or meditation, getting enough sleep, and
+            engaging in hobbies or activities that you enjoy.
+          </div>
+        </li>
+        <li>
+          <img [src]="images.checkup" alt="image" />
+          <div>
+            <strong>Get regular check-ups:</strong> Even if you're not at risk
+            for PCOS or other reproductive health conditions, it's important to
+            get regular check-ups with your healthcare provider. This can
+            include pelvic exams, Pap smears, and other tests to ensure that
+            everything is functioning properly.
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="button">
+    <button (click)="checkAgain()">Check Again</button>
+  </div>
+</div>

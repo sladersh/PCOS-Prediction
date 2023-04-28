@@ -1,0 +1,66 @@
+<div class="predict-container">
+  <h2 class="predict-heading">PCOS Prediction</h2>
+  <div class="predict-form">
+    <form [formGroup]="pcosForm">
+      <div class="form-group">
+        <label for="cycle">Cycle (R/I)</label>
+        <select formControlName="cycle" id="cycle">
+          <option *ngFor="let v of dropdownValues" [value]="v.value">
+            {{ v.text }}
+          </option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="weightGain">Weight gain (Y/N)</label>
+        <select formControlName="weightGain" id="weightGain">
+          <option *ngFor="let v of dropdownValues" [value]="v.value">
+            {{ v.text }}
+          </option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="hairGrowth">Hair growth (Y/N)</label>
+        <select formControlName="hairGrowth" id="hairGrowth">
+          <option *ngFor="let v of dropdownValues" [value]="v.value">
+            {{ v.text }}
+          </option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="skinDarkening">Skin darkening (Y/N)</label>
+        <select formControlName="skinDarkening" id="skinDarkening">
+          <option *ngFor="let v of dropdownValues" [value]="v.value">
+            {{ v.text }}
+          </option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="follicleL">Follicle No. (L)</label>
+        <input
+          type="number"
+          id="follicleL"
+          formControlName="follicleL"
+          [min]="0"
+        />
+      </div>
+      <div class="form-group">
+        <label for="follicleR">Follicle No. (R)</label>
+        <input
+          type="number"
+          id="follicleR"
+          formControlName="follicleR"
+          [min]="0"
+        />
+      </div>
+      <div class="form-group">
+        <button
+          type="submit"
+          (click)="predictPcos()"
+          [disabled]="!pcosForm.valid"
+        >
+          Predict
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
