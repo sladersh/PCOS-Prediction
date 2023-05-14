@@ -8,8 +8,10 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { HeaderComponent } from './components/shared/header/header.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
-import { PredictComponent } from './components/sub-components/predict/predict.component';
-import { ResultComponent } from './components/sub-components/result/result.component';
+import { PredictComponent } from './components/pages/predict/predict.component';
+import { ResultComponent } from './components/pages/result/result.component';
+import { PeriodsTrackerComponent } from './components/pages/periods-tracker/periods-tracker.component';
+import { CalorieTrackerComponent } from './components/pages/calorie-tracker/calorie-tracker.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { ResultComponent } from './components/sub-components/result/result.compo
     FooterComponent,
     PredictComponent,
     ResultComponent,
+    PeriodsTrackerComponent,
+    CalorieTrackerComponent,
   ],
   imports: [
     BrowserModule,

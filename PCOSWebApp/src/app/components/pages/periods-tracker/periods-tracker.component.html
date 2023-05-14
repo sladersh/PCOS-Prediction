@@ -1,0 +1,41 @@
+<div class="periods-tracker-container">
+  <h2 class="periods-tracker-heading">Periods Tracker</h2>
+  <div class="cycle-form">
+    <form [formGroup]="menstrualCycleForm">
+      <div class="form-group">
+        <label for="lastPeriodStartDate"
+          >Last Menstrual Period Start Date</label
+        >
+        <input
+          type="date"
+          id="lastPeriodStartDate"
+          formControlName="lastPeriodStartDate"
+          [max]="today"
+        />
+      </div>
+      <div class="form-group">
+        <label for="cycleLength">Average Menstrual Cycle Length</label>
+        <select formControlName="cycleLength" id="cycleLength">
+          <option *ngFor="let v of dropdownValues" [value]="v.value">
+            {{ v.text }}
+          </option>
+        </select>
+      </div>
+      <div class="form-group">
+        <button
+          type="submit"
+          (click)="checkDate()"
+          [disabled]="!menstrualCycleForm.valid"
+        >
+          Check
+        </button>
+      </div>
+    </form>
+  </div>
+  <div class="result" *ngIf="expectedStartDate">
+    Your next period is likely to start on
+    <span class="value">
+      {{ expectedStartDate | date : "EEEE, MMMM d, y" }}
+    </span>
+  </div>
+</div>

@@ -16,4 +16,7 @@ export const imageList = {
   scan: '/assets/scan.png',
   health: '/assets/health.png',
   treatment: '/assets/treatment.png',
+  predict: '/assets/predict.png',
+  periods: '/assets/periods.png',
+  calories: '/assets/calories.png',
 };

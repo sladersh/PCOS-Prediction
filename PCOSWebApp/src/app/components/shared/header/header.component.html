@@ -1,6 +1,16 @@
 <nav class="nav-bar">
   <header class="logo">
-    <img [src]="logo" alt="PCOS" />
-    <h3>PCOS Prediction App</h3>
+    <a routerLink="/home">
+      <img [src]="logo" alt="PCOS" />
+      <h3>PCOS Prediction App</h3>
+    </a>
   </header>
+  <div class="links">
+    <ul>
+      <li><a routerLink="/home">Home</a></li>
+      <li><a routerLink="/predict-pcos">Predict PCOS</a></li>
+      <li><a routerLink="/periods-tracker">Periods Tracker</a></li>
+      <li><a routerLink="/calorie-tracker">Calorie Tracker</a></li>
+    </ul>
+  </div>
 </nav>

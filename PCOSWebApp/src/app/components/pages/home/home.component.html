@@ -1,3 +1,17 @@
 <div class="home-container">
-  <router-outlet></router-outlet>
+  <h2 class="main-heading">Welcome to PCOS Prediction App</h2>
+  <div class="cards">
+    <a class="card" routerLink="/predict-pcos">
+      <img class="card-icon" [src]="images.predict" alt="image" />
+      <div class="card-title">Predict PCOS</div>
+    </a>
+    <a class="card" routerLink="/periods-tracker">
+      <img class="card-icon" [src]="images.periods" alt="image" />
+      <div class="card-title">Periods Tracker</div>
+    </a>
+    <a class="card" routerLink="/calorie-tracker">
+      <img class="card-icon" [src]="images.calories" alt="image" />
+      <div class="card-title">Calorie Tracker</div>
+    </a>
+  </div>
 </div>

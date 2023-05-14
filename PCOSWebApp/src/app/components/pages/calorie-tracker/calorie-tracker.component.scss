@@ -1,0 +1,87 @@
+.calorie-tracker-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .calorie-tracker-heading {
+    font-size: 3rem;
+    color: #386ae9;
+    font-weight: 900;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    width: 25rem;
+    margin-bottom: 1rem;
+    color: gray;
+    text-align: justify;
+  }
+
+  .calorie-form {
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      width: 25rem;
+      margin-bottom: 1rem;
+
+      label {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #222;
+        margin-bottom: 6px;
+      }
+
+      input[type="number"] {
+        width: 100%;
+        padding: 15px;
+        font-size: 1.2rem;
+        color: #222222;
+        border-radius: 0.5rem;
+        background: #fdfdfd;
+        border: 1px solid gray;
+      }
+
+      select {
+        width: 100%;
+        padding: 15px;
+        font-size: 1.2rem;
+        color: #222222;
+        border-radius: 0.5rem;
+        background: #fdfdfd;
+        border: 1px solid gray;
+      }
+
+      button {
+        width: 100%;
+        padding: 15px;
+        font-size: 1.2rem;
+        color: white;
+        border-radius: 0.5rem;
+        background: #386ae9;
+        cursor: pointer;
+        box-shadow: none;
+        border: none;
+
+        &:disabled {
+          background: lighten(#386ae9, 10%);
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+
+  .result {
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-top: 1rem;
+    background: #d1e7dd;
+    border: 1px solid #badbcc;
+    border-radius: 0.5rem;
+    padding: 20px;
+
+    .value {
+      color: #04aa6d;
+    }
+  }
+}

@@ -1,4 +1,46 @@
 .home-container {
-  min-height: calc(100vh - 8rem);
-  margin: 0 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .main-heading {
+    font-size: 3rem;
+    color: #386ae9;
+    font-weight: 900;
+    margin-bottom: 1rem;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+
+    a.card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 25rem;
+      height: 8rem;
+      border: 0.2rem solid black;
+      border-radius: 1rem;
+      margin-bottom: 1rem;
+      text-decoration: none;
+      color: black;
+
+      &:hover {
+        background: lighten(#386ae9, 30%);
+      }
+
+      img.card-icon {
+        width: 4rem;
+        height: auto;
+        margin-right: 1rem;
+      }
+
+      .card-title {
+        font-size: 1.5rem;
+        font-weight: 900;
+      }
+    }
+  }
 }
